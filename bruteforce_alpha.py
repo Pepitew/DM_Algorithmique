@@ -1,10 +1,5 @@
+import time
 solution = []
-
-def tous_differents(sol):
-    for i in range(len(sol)):
-        for j in range(len(sol)):
-            if(sol[i] == sol[j]):
-                return False
             
 def calcul(sol):
     if ( (sol[0]*1000 + sol[1]*100 +sol[2]*10 + sol[3]) 
@@ -23,6 +18,7 @@ def brutality():
     #! coca + cola = pepsi
     #?caractère unique : c o a l p e s i
     compteur = 0
+    
     for c in range(10):
         for o in range(10):
             if(o!=c):
@@ -47,7 +43,11 @@ def brutality():
     print("nombre de solution = ", compteur)
 
 def exec_brutality():
+    debut = time.time()
     brutality()
     affiche(solution)
+    fin = time.time()
+    temps_ecoule = fin - debut
+    print("temps écoulé =",temps_ecoule, "secondes")
 
 exec_brutality()
