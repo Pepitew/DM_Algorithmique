@@ -2,6 +2,15 @@ import time
 solution = []
             
 def calcul(sol):
+    """
+    Vérifie si la somme des nombres formés par les éléments de la liste `sol` est égale au nombre formé par les éléments aux indices 10 à 14 de `sol`.
+
+    Args:
+        sol (list): Une liste contenant les éléments nécessaires pour effectuer le calcul.
+
+    Returns:
+        bool: True si la somme est égale au nombre, False sinon.
+    """
     if ( (sol[0]*1000 + sol[1]*100 +sol[2]*10 + sol[3]) 
        + (sol[5]*1000 + sol[6]*100 + sol[7]*10 + sol[8])
        == (sol[10]*10000 + sol[11]*1000 + sol[12]*100 + sol[13]*10 + sol[14])
@@ -9,11 +18,37 @@ def calcul(sol):
         return True
 
 def affiche(tab):
+    """
+    Affiche les éléments d'un tableau.
+
+    Args:
+        tab (list): Le tableau à afficher.
+
+    Returns:
+        None
+    """
     for i in range(0, len(tab)):
         print(tab[i])
     
     
 def brutality():
+    """
+    Cette fonction effectue une recherche exhaustive pour résoudre le problème suivant :
+    Trouver les valeurs des variables c, o, a, l, p, e, s, i qui satisfont l'équation coca + cola = pepsi.
+    Chaque variable doit prendre une valeur différente parmi les chiffres de 0 à 9.
+    
+    La fonction utilise des boucles imbriquées pour générer toutes les combinaisons possibles des variables.
+    Chaque combinaison est vérifiée en appelant la fonction calcul pour vérifier si elle satisfait l'équation.
+    Les solutions valides sont stockées dans la liste solution.
+    
+    À la fin de l'exécution, la fonction affiche le nombre de solutions trouvées.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     
     #! coca + cola = pepsi
     #?caractère unique : c o a l p e s i
