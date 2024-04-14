@@ -1,3 +1,5 @@
+# BESSIERES
+# CLEMENT
 global COMPTEUR_EXEC
 COMPTEUR_EXEC = 0
 import time
@@ -7,7 +9,7 @@ def tous_differents(sol):
     Vérifie si tous les éléments dans la liste 'sol' sont différents les uns des autres.
 
     Args:
-        sol (list): Une liste d'éléments.
+        sol (liste): Une liste d'éléments.
 
     Returns:
         bool: True si tous les éléments sont différents, False sinon.
@@ -23,7 +25,7 @@ def calcul(sol):
     Calcule si la solution donnée est valide.
 
     Args:
-        sol (list): Une liste contenant les valeurs des variables A, I, C, L, S, O, P, E.
+        sol (liste): Une liste contenant les valeurs des variables A, I, C, L, S, O, P, E.
 
     Returns:
         bool: True si la solution est valide, False sinon.
@@ -40,7 +42,7 @@ def affiche(tab):
     Affiche la solution du problème de l'équation coca + cola = pepsi.
 
     Args:
-        tab (list): Une liste contenant les valeurs des lettres correspondantes aux chiffres de l'équation.
+        tab (liste): Une liste contenant les valeurs des lettres correspondantes aux chiffres de l'équation.
 
     Returns:
         None
@@ -60,7 +62,7 @@ def est_solution(sol):
     Vérifie si la solution donnée est une solution valide.
 
     Args:
-        sol (list): La solution à vérifier.
+        sol (liste): La solution à vérifier.
 
     Returns:
         bool: True si la solution est valide, False sinon.
@@ -84,7 +86,7 @@ def ajout_possible(sol):
     Vérifie si une solution partielle peut être ajoutée à la solution complète.
 
     Args:
-        sol (list): La solution partielle à vérifier.
+        sol (liste): La solution partielle à vérifier.
 
     Returns:
         bool: True si la solution partielle peut être ajoutée, False sinon.
@@ -119,7 +121,7 @@ def backtracking(sol):
     Effectue une recherche en profondeur avec retour en arrière (backtracking) pour trouver une solution.
 
     Args:
-        sol (list): La solution partielle actuelle.
+        sol (liste): La solution partielle actuelle.
 
     Returns:
         None
@@ -150,7 +152,7 @@ assert tous_differents([5, 4, 3, 2, 1]) == True
 assert tous_differents([1, 1]) == False
 assert tous_differents([]) == True
 
-#Inutile de tester les fonctions calcul et affiche
+#Inutile de tester les fonctions calcul() et affiche()
 
 
 exec_backtracking()
